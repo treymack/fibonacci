@@ -10,7 +10,7 @@ namespace FibCSharp
             var max = 50;
             Enumerable.Range(0, int.MaxValue)
                 .Select(Fib)
-                .TakeWhile(x => x <= 50)
+                .TakeWhile(x => x <= max)
                 .ToList()
                 .ForEach(Console.WriteLine);
         }
