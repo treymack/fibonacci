@@ -16,7 +16,8 @@ namespace FibCSharp
         }
 
         static int Fib(int arg) =>
-            arg == 0 ? 0
+            arg < 0 ? throw new Exception("Argument must be >= 0")
+            : arg == 0 ? 0
             : arg == 1 ? 1
             : Fib(arg - 2) + Fib(arg - 1);
     }
